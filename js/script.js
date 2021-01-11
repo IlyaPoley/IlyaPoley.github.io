@@ -21,11 +21,21 @@ $(window).scroll(function() {
         $('.pageup').fadeOut();
     }
 });
+
 $("a[href=#up]").click(function(){
     var _href = $(this).attr("href");
     $("html, body").animate({scrollTop: $(_href).offset().top+"px"});
     return false;
 });
+
+/* Плавный переход */
+var $page = $('html, body');
+$('a[href*="#"]').click(function() {
+    $page.animate({
+        scrollTop: $($.attr(this, 'href')).offset().top}, 800);
+    return false;
+});
+
 /* Проверка формы */
 function validateForms(form){
     $(form).validate({
@@ -95,8 +105,8 @@ function toggleSlide(item) {
 
 toggleSlide('.jobs-item__link');
 toggleSlide('.jobs-item__back');
-    
-   /*заполнение калы прогресса*/
+
+/*заполнение шкалы прогресса*/
 $('.skill-per').each(function(){
     var $this = $(this);
     var per = $this.attr('per');
