@@ -20,7 +20,7 @@ $mail->Password = 'htmlcssjava17';                           // Наш паро�
 $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
 $mail->Port = 465;                                    // TCP port to connect to
  
-$mail->setFrom('', 'Resume');   // От кого письмо 
+$mail->setFrom('ilya-polei@mail.ru', 'Resume');   // От кого письмо 
 $mail->addAddress('ilya-polei@mail.ru');     // Add a recipient
 //$mail->addAddress('ellen@example.com');               // Name is optional
 //$mail->addReplyTo('info@example.com', 'Information');
