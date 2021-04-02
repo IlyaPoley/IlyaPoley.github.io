@@ -1,2 +1,0 @@
-# IlyaPoley.github.io
-Resume
